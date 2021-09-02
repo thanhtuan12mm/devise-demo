@@ -1,0 +1,22 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+
+development:
+  <<: *default
+  database: devise-demo_development
+  username: postgres
+  password:
+
+test:
+  <<: *default
+  database: devise-demo_test
+  username: postgres
+  password:
+
+production:
+  <<: *default
+  database: devise-demo_production
+  username: devise-demo
+  password: <%= ENV['DEVISE-DEMO_DATABASE_PASSWORD'] %>
