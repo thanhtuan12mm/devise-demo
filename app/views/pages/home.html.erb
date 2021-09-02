@@ -2,8 +2,11 @@
   <div class='container'>
     <h1>Home Page</h1>
     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-    <%= link_to 'Sign In', '#', class: 'btn btn-primary' %>
-    <%= link_to 'Sign Up', '#', class: 'btn btn-primary' %>
-    <%= link_to 'Go to profile', me_path, class: 'btn btn-primary' %>
+    <% if user_signed_in? %>
+      <%= link_to 'Go to profile', me_path, class: 'btn btn-primary' %>
+    <% else %>
+      <%= link_to 'Sign In', new_user_session_path, class: 'btn btn-primary' %>
+      <%= link_to 'Sign Up', new_user_registration_path, class: 'btn btn-primary' %>
+    <% end %>
   </div>
 </div>

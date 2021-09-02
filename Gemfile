@@ -14,6 +14,7 @@ gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 gem 'bootsnap', '>= 1.1.0', require: false
 gem 'devise', '~> 4.8'
+gem 'letter_opener'
 
 gem 'bootstrap', '~> 5.1.0'
 gem 'jquery-rails'
